@@ -15,11 +15,7 @@
       <div class="logo">
         <img src="images/logo.png" alt="Mikrontek Logo">
       </div>
-      <div class="search-container">
-        <input type="text" class="search-input" placeholder="Search kits..." onkeyup="searchKits(this.value)">
-        <div class="search-results" id="searchResults"></div>
-      </div>
-    </div>
+      
   
     <!-- 🔹 Categories Bar -->
     <div class="categories">
@@ -28,6 +24,12 @@
       <div class="category" onclick="loadKits('RG')">RG <span>➕</span></div>
       <div class="category" onclick="loadKits('HG')">HG <span>➕</span></div>
     </div>
+
+    <div class="search-container">
+      <input type="text" class="search-input" placeholder="Search kits..." onkeyup="searchKits(this.value)">
+      <div class="search-results" id="searchResults"></div>
+    </div>
+  </div>
   
     <!-- 🔹 Kits Container -->
     <div class="kits" id="kitsContainer">
