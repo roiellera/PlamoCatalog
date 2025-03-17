@@ -1,16 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Plamo Kits</title>
+  <title>Mikrontek Gundam Catalog</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    .categories {
+      display: flex;
+      flex-wrap: wrap;
+      background-color: #0099FF;
+      padding: 10px;
+    }
+    .category {
+      color: white;
+      padding: 5px 10px;
+      margin-right: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+    }
+    .kits {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+    .kit {
+      width: 242px;
+      margin: 10px;
+      text-align: center;
+      border: 1px solid #ddd;
+      padding: 10px;
+    }
+    .kit img {
+      width: 242px;
+      height: 200px;
+      object-fit: cover;
+    }
+  </style>
 </head>
 <body>
-  <h1>Plamo Kits</h1>
-  <ul>
-    <li><a href="category.html?category=PG">Perfect Grade (PG)</a></li>
-    <li><a href="category.html?category=MG">Master Grade (MG)</a></li>
-    <li><a href="category.html?category=RG">Real Grade (RG)</a></li>
-    <li><a href="category.html?category=HG">High Grade (HG)</a></li>
-  </ul>
+
+<div class="categories">
+  <div class="category" onclick="loadKits('PG')">PG <span style="margin-left:5px;">➕</span></div>
+  <div class="category" onclick="loadKits('MG')">MG <span style="margin-left:5px;">➕</span></div>
+  <div class="category" onclick="loadKits('RG')">RG <span style="margin-left:5px;">➕</span></div>
+  <div class="category" onclick="loadKits('HG')">HG <span style="margin-left:5px;">➕</span></div>
+</div>
+
+<div class="kits" id="kitsContainer">
+  <!-- Kits dynamically load here -->
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
