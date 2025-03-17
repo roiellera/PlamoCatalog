@@ -1,26 +1,138 @@
+/* Global Styles */
 body {
   font-family: Arial, sans-serif;
-  margin: 20px;
+  margin: 0;
   padding: 0;
 }
 
-h1, h2, h3 {
-  color: #333;
+/* Container - Adjust Height to Match the Logo */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  border: 2px solid #ccc;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  min-height: 700px; /* Ensures space for logo & elements */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Keeps content aligned properly */
 }
 
+
+/* Header - Aligns Logo & Search */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+/* Logo - Resize to Fit Well */
+.logo img {
+  height: 300px; /* Increased size */
+  width: auto;
+  
+}
+
+/* Search Bar */
+.search-container {
+  position: relative;
+}
+
+.search-input {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 200px;
+}
+
+/* Dropdown Search Results */
+.search-results {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: none;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.search-results div {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.search-results div:hover {
+  background-color: #f0f0f0;
+}
+
+/* Categories - Add Space Below the Logo */
+.categories {
+  display: flex;
+  justify-content: center;
+  background-color: #0099FF;
+  padding: 15px;
+  border-radius: 5px;
+  width: fit-content;
+  margin: 2px auto; /* Adds spacing below logo */
+}
+
+/* Category Buttons */
+.category {
+  color: white;
+  padding: 10px 15px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  background-color: #007ACC;
+  transition: 0.3s;
+}
+
+.category:hover {
+  background-color: #005F99;
+}
+
+/* Kits - Ensure Proper Spacing Below Categories */
+.kits {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 40px; /* Increases space below categories */
+  gap: 20px;
+  width: 100%;
+}
+
+/* Kit Box */
 .kit {
+  width: 242px;
+  margin: 10px;
+  text-align: center;
   border: 1px solid #ddd;
   padding: 10px;
-  margin: 10px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px #ccc;
-  display: inline-block;
-  text-align: center;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Modal Background (Hidden by Default) */
+.kit img {
+  width: 242px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* Modal (Centered on Screen) */
 .modal {
-  display: none; /* Hides the modal initially */
+  display: none;
   position: fixed;
   z-index: 1000;
   left: 0;
@@ -53,14 +165,14 @@ h1, h2, h3 {
   font-size: 35px;
   cursor: pointer;
   font-weight: bold;
-  user-select: none; /* Fixes text selection issue */
+  user-select: none; /* Prevents text selection */
   transition: 0.3s;
   border: none;
   background: none;
-  display: inline-flex; /* Ensures it behaves as a button */
+  display: flex;
   align-items: center;
   justify-content: center;
-  width: 50px; /* Ensures a larger click area */
+  width: 50px;
   height: 50px;
   text-align: center;
 }
