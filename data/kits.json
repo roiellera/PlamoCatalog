@@ -1,0 +1,44 @@
+{
+  "kits": [
+    {
+      "id": "rg_rx78",
+      "name": "RG RX-78-2 Gundam",
+      "category": "RG",
+      "price": "₱2,000",
+      "image": "rg_rx78.jpg",
+      "description": "Master Grade RX-78-2 Gundam, 1/144 scale."
+    },
+    {
+      "id": "pg_unicorn",
+      "name": "PG Unicorn Gundam",
+      "category": "PG",
+      "price": "₱10,000",
+      "image": "pg_unicorn.jpg",
+      "description": "Perfect Grade Unicorn Gundam, 1/60 scale."
+    },
+	{
+      "id": "mg_shinmushaaltar",
+      "name": "MG Shin Musha Altar",
+      "category": "MG",
+      "price": "₱5,500",
+      "image": "mg_shinmushaaltar.jpg",
+      "description": "Master Grade Shin Musha Altar, 1/100 scale."
+    },
+	{
+      "id": "mg_mk2",
+      "name": "MG Musha Gundam MKII",
+      "category": "MG",
+      "price": "₱3,500",
+      "image": "mg_mk2.jpg",
+      "description": "Master Grade Musha Gundam MKII, 1/100 scale."
+    },
+	{
+      "id": "mg_psychozaku",
+      "name": "MG Psycho Zaku Ver Ka",
+      "category": "MG",
+      "price": "₱6,500",
+      "image": "mg_psychozaku.jpg",
+      "description": "Master Grade Psycho Zaku Ver Ka Gundam, 1/100 scale."
+    }
+  ]
+}
