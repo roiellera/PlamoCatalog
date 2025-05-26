@@ -1,24 +1,18 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Mikrontek Gundam Catalog</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-
 <body>
-
-  <!-- 🔹 Main Centered Container -->
   <div class="container">
-  
-    <!-- 🔹 Header (Logo + Search) -->
+
+    <!-- 🔹 Header: Logo + Search -->
     <div class="header">
       <div class="logo">
         <img src="images/logo.png" alt="Mikrontek Logo">
       </div>
-      
-  
-    <!-- 🔹 Categories Bar -->
-    <!-- 🔹 Navigation Dropdown -->
+      <div class="search-container">
+        <input type="text" class="search-input" placeholder="Search kits..." onkeyup="searchKits(this.value)">
+        <div class="search-results" id="searchResults"></div>
+      </div>
+    </div>
+
+    <!-- 🔹 Dropdown Navigation -->
     <nav class="navbar">
       <ul class="nav-menu">
         <li class="nav-item">
@@ -40,23 +34,20 @@
       </ul>
     </nav>
 
-  
-    <!-- 🔹 Kits Container -->
+    <!-- 🔹 Kits Display Area -->
     <div class="kits" id="kitsContainer">
-      <!-- Kits dynamically load here -->
+      <!-- Kits will load here -->
     </div>
-  
-  </div> <!-- END OF .container -->
-  
-  <!-- 🔹 Modal (Popup for Kit Details) - Kept Centered -->
+
+  </div>
+
+  <!-- 🔹 Modal -->
   <div id="kitModal" class="modal">
     <div class="modal-content">
       <button class="close" onclick="closeModal()">&times;</button>
       <div id="kitDetails"></div>
     </div>
   </div>
-  
+
   <script src="script.js"></script>
-  </body>
-  
-</html>
+</body>
