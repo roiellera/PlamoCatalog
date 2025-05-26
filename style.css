@@ -32,11 +32,9 @@ body {
 
 /* Logo - Resize to Fit Well */
 .logo img {
-  height: 250px; /* Increased size */
-  width: auto;
-  display: block;
-  margin: 0 auto; /* Centers the logo */
-  
+  height: 200px; /* Adjust height */
+  width: auto; /* Keeps aspect ratio */
+  max-width: 300px; /* Prevents it from becoming too big */
 }
 
 /* Search Bar */
@@ -183,4 +181,67 @@ body {
 .close:hover {
   color: red;
   transform: scale(1.2);
+}
+
+/* Navbar Styling */
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.nav-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 40px;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-item > span {
+  color: white;
+  background-color: #0099FF;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.nav-item:hover > span {
+  background-color: #007ACC;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 110%;
+  left: 0;
+  background-color: #0099FF;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 5px;
+  z-index: 10;
+  min-width: 160px;
+}
+
+.dropdown li {
+  padding: 10px;
+  color: white;
+  cursor: pointer;
+  text-align: left;
+}
+
+.dropdown li:hover {
+  background-color: #005F99;
+}
+
+/* Show dropdown on hover */
+.nav-item:hover .dropdown {
+  display: block;
 }
