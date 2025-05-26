@@ -18,18 +18,28 @@
       
   
     <!-- 🔹 Categories Bar -->
-    <div class="categories">
-      <div class="category" onclick="loadKits('PG')">PG <span>➕</span></div>
-      <div class="category" onclick="loadKits('MG')">MG <span>➕</span></div>
-      <div class="category" onclick="loadKits('RG')">RG <span>➕</span></div>
-      <div class="category" onclick="loadKits('HG')">HG <span>➕</span></div>
-    </div>
+    <!-- 🔹 Navigation Dropdown -->
+    <nav class="navbar">
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <span>Bandai Kit ⮟</span>
+          <ul class="dropdown">
+            <li onclick="loadKits('PG')">PG</li>
+            <li onclick="loadKits('MG')">MG</li>
+            <li onclick="loadKits('RG')">RG</li>
+            <li onclick="loadKits('HG')">HG</li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <span>3rd Party / Bootleg Kit ⮟</span>
+          <ul class="dropdown">
+            <li onclick="loadKits('Bootleg-Preorder')">Pre-Order</li>
+            <li onclick="loadKits('Bootleg-Available')">Available</li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
 
-    <div class="search-container">
-      <input type="text" class="search-input" placeholder="Search kits..." onkeyup="searchKits(this.value)">
-      <div class="search-results" id="searchResults"></div>
-    </div>
-  </div>
   
     <!-- 🔹 Kits Container -->
     <div class="kits" id="kitsContainer">
